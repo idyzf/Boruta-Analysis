@@ -11,10 +11,11 @@ summary(as.factor(pt_clinical$ID))
 pt_nanostring <- read.xlsx("ruvcorrected_boruta.xlsx")
 head(pt_nanostring)
 rownames(pt_nanostring)<- pt_nanostring$ID
-#pt_nanostring$ID <- pt_nanostring$Name
-#pt_nanostring$Name <- NULL
+
 str(pt_nanostring)
 library(dplyr)
+
+
 #merging data sets
 data1<- left_join(pt_clinical[, c(16, 51)], pt_nanostring)
 names(data1)
