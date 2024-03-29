@@ -1,5 +1,4 @@
 library(openxlsx)
-
 rm(list = ls())
 pt_clinical <- read.xlsx("IHQ_stain_clinical.xlsx")
 names(pt_clinical)
